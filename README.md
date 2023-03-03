@@ -1,2 +1,2 @@
 # VortexEngine
-My game engine is a project currently in development that aims to become a robust 2D game engine built in Python.
+My game engine is a project currently in development that aims to become a robust 2D game engine built in Python. The engine will be designed to provide users with the tools to create their own platformer games, including customizable player characters, dynamic backgrounds, collision detection, and gravity simulation. With this engine, users will be able to create and customize their own levels, enemies, and items, allowing for endless possibilities in game design. That's just the beginning!
