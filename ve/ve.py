@@ -96,7 +96,7 @@ class GameObject:
         self.y = y
         self.width = int(width)
         self.height = int(height)
-        self.speed = 100  # pixel per second
+        self.speed = 400  # pixel per second
         if color in color_dict:
             self.color = color_dict[color]
 

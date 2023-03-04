@@ -18,15 +18,15 @@ test.move(5, 0)
 # game.delete_object(enemy)
 
 
-def update(deltatime):
+def update(delta_time):
     if game.key_pressed("d"):
-        player.move(dx=player.speed * deltatime, dy=0)
+        player.move(dx=player.speed * delta_time, dy=0)
     elif game.key_pressed("a"):
-        player.move(dx=-player.speed * deltatime)
+        player.move(dx=-player.speed * delta_time)
     elif game.key_pressed("s"):
-        player.move(0, player.speed * deltatime)
+        player.move(0, player.speed * delta_time)
     elif game.key_pressed("w"):
-        player.move(0, -player.speed + deltatime)
+        player.move(0, -player.speed * delta_time)
 
     if player.collided(enemy):
         print("yey")
