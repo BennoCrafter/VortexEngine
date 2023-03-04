@@ -13,9 +13,12 @@ color_dict = {
     "white": (255, 255, 255)
 }
 
+scenes = []
 
-class GameEngine:
+
+class GameScene:
     def __init__(self, screen_width=None, screen_height=None, screen_name="Default", screen_color=None):
+        scenes.append(self)
         sdl2.ext.init()
         self.objects = []
         self.screen_width = screen_width
@@ -29,7 +32,11 @@ class GameEngine:
         self.objects.append(obj)
 
     def delete_object(self, obj):
-        self.objects.remove(obj)
+        if obj in self.objects:
+            if obj.collider_obj is not None:
+                del obj.collider_obj
+            self.objects.remove(obj)
+            del obj
 
     def key_pressed(self, key):
         if key == self.current_key:

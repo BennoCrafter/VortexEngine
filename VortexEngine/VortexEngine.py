@@ -1,2 +1,3 @@
 from VortexEngine.GameObject import GameObject
-from VortexEngine.GameEngine import GameEngine
+from VortexEngine.Collider import Collider
+from VortexEngine.GameEngine import GameScene
