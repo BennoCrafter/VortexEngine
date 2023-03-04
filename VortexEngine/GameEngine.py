@@ -88,25 +88,3 @@ class GameEngine:
             return key_name.lower()
         else:
             return "space"
-
-
-class GameObject:
-    def __init__(self, x, y, width, height, color):
-        self.x = x
-        self.y = y
-        self.width = int(width)
-        self.height = int(height)
-        self.speed = 400  # pixel per second
-        if color in color_dict:
-            self.color = color_dict[color]
-
-    def move(self, dx=0, dy=0):
-        self.x += dx
-        self.y += dy
-
-    def collided(self, other):
-        # Check if the two game objects intersect
-        return (self.x < other.x + other.width and
-                self.x + self.width > other.x and
-                self.y < other.y + other.height and
-                self.y + self.height > other.y)

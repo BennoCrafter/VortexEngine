@@ -1,10 +1,10 @@
-from ve.ve import GameEngine, GameObject
+from VortexEngine.VortexEngine import *
 
 # Initialize the game engine
 game = GameEngine(screen_width=800, screen_height=600, screen_name="Demo Game", screen_color="yellow")
 
 # Create game objects
-player = GameObject(x=100, y=100, width=50, height=50, color="blue")
+player = GameObject(x=100, y=100, width=50, height=50, color="blue", speed=400)
 enemy = GameObject(x=500, y=300, width=50, height=50, color="red")
 test = GameObject(200, 200, 60, 60, "pink")
 
