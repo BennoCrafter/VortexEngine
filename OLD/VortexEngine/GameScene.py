@@ -1,6 +1,6 @@
 import sdl2.ext
 import time
-
+from VortexEngine.GameEngine import scenes
 color_dict = {
     "red": (255, 0, 0),
     "green": (0, 255, 0),
@@ -12,8 +12,6 @@ color_dict = {
     "black": (0, 0, 0),
     "white": (255, 255, 255)
 }
-
-scenes = []
 
 
 class GameScene:
@@ -53,9 +51,6 @@ class GameScene:
             sdl2.SDL_RenderFillRect(self.renderer.sdlrenderer, rect)
 
         self.renderer.present()
-
-    def close_window(self):
-        sdl2.ext.quit()
 
     def start(self):
         # Create the renderer
